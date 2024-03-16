@@ -1,0 +1,452 @@
+<!DOCTYPE html> 
+
+<html lang="en"> <!-- Start of html -->
+
+	<head> <!-- Start of head -->
+		
+		<!-- Start of Metadate -->
+		<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="Content" content="Exercise No.3: Real Estate Website">
+		<meta name="Page" content="Project Page">
+		<meta name="Author" content="Dino Alfred T. Timbol"> <!-- End of Metadate -->
+
+		<link rel="icon" href="./Images/input-onlinepngtools.jpg"image/x-icon"> <!-- Favicon -->
+
+		<title>Realistic Real Estate</title> 
+
+        <style> /* Start of Internal Styles */
+
+            * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+
+            
+            body {
+
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+
+            /* Start of styles for the Header */
+
+            .header-container {
+                display: flex;
+                background-image: url('./Images/real-estate-20c9os156eqcqd4j.jpg');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-attachment: fixed;
+                background-size: cover;
+                height: 75vh;
+                justify-content: center;
+                flex-flow: column wrap;
+                align-content: center; 
+                align-items: center;
+                text-align: center;
+            }
+
+            .header-container h1 {
+                
+                display: flex;
+                -webkit-text-stroke-width: 5px;
+                -webkit-text-stroke-color: #1F2937;
+                font-size: 130px;
+                color: #f9faf8;
+            }
+
+            .header-container h2 {
+
+                -webkit-text-stroke-width: 3px;
+                -webkit-text-stroke-color: #1F2937;
+                font-size: 64px;
+                color: #f9faf8;
+
+            }
+
+
+           /*  End of styles for the Header */
+
+            /* Start of styles for the Navigation Bar */
+
+            .nav-container {
+
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: space-around;
+                align-items: center;
+                background-color: #1F2937;
+            }
+
+            .nav-container .outline {
+
+                display: flex;
+                gap: 1em;
+                color: #f9faf8;
+                font-size: 20px;
+
+            }
+
+            .nav-container .outline a {
+
+                color: #f9faf8;
+                font-weight: 400;
+            }
+
+            .nav-container ul a {
+
+                padding: 1em;
+                text-decoration: none
+
+            }
+
+            .nav-container .outline a:hover {
+
+                color: #d19b2f;
+            }   
+
+            .nav-container .outline .active {
+                color: #d19b2f;
+            }
+
+            /* End of styles for the Navigation Bar */
+
+            /* Start of styles for the Bungalow section */
+
+            .section-container {
+
+                display: flex;
+                flex-flow: column wrap;
+                background-color: #f9faf8;
+                border: 10px solid #1F2937;
+                margin: 2em;
+                box-shadow: 10px 10px 8px #888888;
+            }
+
+            .section-container #head {
+
+                padding: 1em;
+                border: 10px solid #d19b2f;
+                text-align: center;
+                font-size: 28px;
+            }
+
+            .section-container .info-container {
+
+                display: flex;
+                column-gap: 0.3em;
+                row-gap: 0.5em;
+                border: 5px solid lightgrey;
+
+            }
+
+            .section-container .info-container .text-container h1 {
+
+                padding: 0.5em;
+                text-align: center;
+                font-size: 24px;
+            }
+
+            .section-container .info-container .text-container p {
+
+                text-align: justify;
+                text-justify: inter-word;
+                padding: 0.5em 3em 0.5em 3em;
+                font-size: 18px;
+                text-indent:50px;
+            }
+
+            .section-container .info-container .image-container {
+
+                border: 5px solid #d19b2f;
+                display: flex;
+                flex-flow: column wrap;
+                text-align: center;
+                align-self: flex-start;
+            }
+
+            /* End of styles for the Bungalow section */
+
+        
+            /* Start of styles for the Footer */
+
+            footer
+            {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-flow: column wrap;
+                background-color: #1F2937;
+                font-weight: 400;
+                width: 100%;
+                font-size: 14px;
+                overflow: hidden;
+                padding: 1.5em;
+                color: #f9faf8;
+            }
+
+            footer a {
+                text-decoration: none;
+                color: #f9faf8;
+            }
+
+            footer a:hover {
+                color: #d19b2f;
+            }
+
+            /* End of styles for the Footer */
+
+            /* Start of Media Queries for Responsiveness of the various page 
+      components relative to each successive screen size */
+
+            @media all and (max-width: 1020px) {
+
+                .header-container h1 {
+                    font-size: 80px;
+                    -webkit-text-stroke-width: 3px;
+                }
+
+                .header-container h2 {
+                    font-size: 50px;
+                    -webkit-text-stroke-width: 3px;
+                }
+
+                .section-container .info-container {
+                    flex-flow: column wrap;
+                }
+
+                .section-container .info-container .image-container {
+                    align-self: center;
+                }
+
+            }
+
+            @media all and (max-width: 771px) {
+
+                .section-container .info-container .image-container img {
+                    width: 450px;
+                    height: 450px;
+                }
+
+            }
+
+            @media all and (max-width: 660px) {
+
+                .header-container h1 {
+                    font-size: 80px;
+                    -webkit-text-stroke-width: 3px;
+                }
+
+                .header-container h2 {
+                    font-size: 50px;
+                    -webkit-text-stroke-width: 3px;
+                }
+
+                .nav-container .outline {
+
+                    gap: 0em;
+                    font-size: 16px;
+
+                }
+
+                .section-container .info-container {
+                    flex-flow: column wrap;
+                }
+
+                .section-container .info-container .image-container {
+                    align-self: center;
+                }
+
+            }
+
+            @media all and (max-width: 556px) {
+
+                .header-container h1 {
+                    font-size: 65px;
+                    -webkit-text-stroke-width: 3px;
+                }
+
+                .header-container h2 {
+                    font-size: 30px;
+                    -webkit-text-stroke-width: 1.5px;
+                }
+
+                .section-container .info-container {
+                    flex-flow: column wrap;
+                }
+
+                .section-container .info-container .image-container {
+                    
+                    align-self: center;
+                }
+
+                .section-container .info-container .text-container p {
+
+                    font-size: 14px;
+
+                }
+
+                .section-container  .info-container .text-container #blockqt-2 {
+                    font-size: 14px;
+                }
+
+
+                .section-container .info-container .image-container img {
+                    width: 350px;
+                    height: 350px;
+                }
+
+            }
+
+            @media all and (max-width: 460px) {
+
+                .section-container .info-container .image-container img{
+                    width: 250px;
+                    height: 250px;
+                }
+            }
+
+            @media all and (max-width: 415px) {
+
+                .header-container h1 {
+                    font-size: 40px;
+                    -webkit-text-stroke-width: 1.5px;
+                }
+
+                .header-container h2 {
+                    font-size: 25px;
+                    -webkit-text-stroke-width: 1px;
+                }
+
+                .nav-container .outline {
+
+                    font-size: 12px;
+
+                }
+
+                .section-container .info-container {
+                    flex-flow: column wrap;
+                }
+
+                .section-container #head {
+                    font-size: 20px;
+                }
+
+                .section-container .info-container .text-container h1 {
+                    font-size: 18px;
+                }
+
+                .section-container .info-container .image-container {
+                    align-self: center;
+                }
+
+            }
+
+            /* End of Media Queries for Responsiveness of the various page 
+            components relative to each successive screen size */
+
+            
+        </style> <!-- End of Internal Styles -->
+
+    </head>
+
+    <body>
+
+        <header class="header-container">
+
+            <h1>Realistic Real Estate</h1>
+
+            <h2>Where dreams become real...</h2>
+
+            <br>
+
+        </header>
+
+        <nav class="nav-container"> <!-- Start of the HTML for the Navigation Bar -->
+
+            <ul class="outline"> 
+
+				
+				<a href="./Timbol_ex2.html#about"><bold>ABOUT US</bold></a> 
+
+				<a href="./page2.html" class="active" onclick="
+                        $('li').click(function(){
+                        $(this).removeClass('active');
+                        $(this).addClass('active');
+                    })"
+                    ><bold>PROJECT</bold></a> 
+
+                <a href="./page3.html"><bold>FORM</bold></a>   
+
+			</ul> 
+			
+			<!-- Logo -->
+			<a href="./Timbol_ex2.html"><img src="./Images/professional_yellow_logo(1).png" width="100px" height="100px" alt="Realistic Real Estate Logo" id="logo"></a>
+
+        </nav> <!-- End of the HTML for the Navigation Bar -->
+
+        <section class="section-container" id="bungalow"> <!-- Start of HTMl for the Bungalow section-->
+			<h1 id="head">Map of a Modern Bungalow</h1>
+			
+			<div class="info-container"> 
+
+				<div class="image-container">
+          	
+                    <img src="./Images/floorplan.jpg" alt="floorplan" width="550px" height="600px" usemap="#floorplan">
+
+                    <map name="floorplan">
+        
+                        <area shape="rect" coords="6, 8, 60, 150" href="./dining.html" >
+
+                        <area shape="rect" coords="90, 6, 200, 170" href="./living.html" >
+
+                        <area shape="rect" coords="272, 7, 412, 204" href="./master.html" >
+
+                        <area shape="rect" coords="236, 291, 301, 365" href="./library.html" >
+
+                        <area shape="poly" coords="2, 168, 71, 167, 96, 192, 96, 266, 82, 268, 81, 312, 4, 312" href="./kitchen.html" >
+
+        
+                    </map>                    
+
+				</div>
+
+				<div class="text-container">
+
+                    <h1>Valenzuela Bungalow</h1>
+					
+                    <p>
+                        In contemporary architecture, a <em>bungalow</em> typically refers to a single-story dwelling characterized by its low profile, open floor plan, and wide verandas or porches. Modern bungalows often feature minimalist design elements, clean lines, and sustainable materials, reflecting a fusion of simplicity, functionality, and aesthetic appeal. These homes are designed to provide comfortable and accessible living spaces for individuals or families, with an emphasis on seamless indoor-outdoor integration and efficient use of space. With their unassuming yet stylish exteriors, modern bungalows offer a versatile housing option that can adapt to various lifestyle preferences and environmental contexts.
+                    </p>
+
+                    <p>
+                        Nestled in the heart of Valenzuela City, Philippines, a modern bungalow represents a serene retreat amidst the hustle and bustle of urban life. The map of this contemporary residence highlights its idyllic location within the city, offering residents a peaceful haven surrounded by lush greenery and scenic landscapes. Situated in close proximity to essential amenities such as shopping centers, schools, and healthcare facilities, the modern bungalow provides the perfect balance between convenience and tranquility, allowing residents to enjoy the best of both worlds.
+                    </p>
+
+                     <p>
+                        The map of a modern bungalow in Valenzuela City showcases the thoughtful integration of sustainable design principles and eco-friendly features. From energy-efficient appliances and passive cooling techniques to rainwater harvesting systems and native landscaping, these homes are designed with environmental stewardship in mind. Residents can embrace a greener lifestyle while reducing their ecological footprint and lowering utility costs, contributing to a more sustainable and resilient community.
+                     </p>
+
+                     <p>
+                        Beyond the physical attributes depicted on the map, the appeal of a modern bungalow in Valenzuela City lies in its sense of community and connection. Residents have the opportunity to engage in neighborly interactions, participate in local events, and cultivate a strong sense of belonging within their close-knit neighborhood. Whether enjoying a leisurely stroll along tree-lined streets or gathering with friends and family on the spacious veranda, residents of the modern bungalow can create cherished memories and experience the true essence of home.
+                     </p>
+
+                     <p><strong>Note: To view the rooms, please click them on the image on the right.</strong></p>
+
+                     <br />
+					
+				</div>
+				
+			</div>
+			
+		</section> <!-- End of HTMl for the Bungalow section -->
+
+
+        <footer>
+            <i>Copyright &copy Dino Alfred T. Timbol 2024</i> 
+            <a href="#">Back To Top</a>
+        </footer>
+
+    </body>
+
+</html>
