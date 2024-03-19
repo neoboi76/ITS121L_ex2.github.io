@@ -112,7 +112,7 @@
 
         /* End of styles for the Navigation Bar */
 
-        /* Start of styles for the About section */
+        /* Start of styles for the Forms section */
 
             .section-container {
 
@@ -122,6 +122,7 @@
                 border: 10px solid #1F2937;
                 margin: 2em;
                 box-shadow: 10px 10px 8px #888888;
+               /*  overflow: auto; */
             }
 
             .section-container #head {
@@ -135,75 +136,64 @@
             .section-container .info-container {
 
                 display: flex;
-                column-gap: 0.3em;
-                row-gap: 0.5em;
+                flex-flow: row wrap;
                 border: 5px solid lightgrey;
-
+                text-decoration: none;
+                justify-content: center;
             }
-            
-            .section-container .info-container .text-container h1 {
 
-                padding: 0.5em;
-                text-align: center;
+            .section-container .info-container .text-container {
+                display: flex;
+                text-decoration: none;
+            }
+
+            .section-container .info-container .text-container form {
+                display: flex;
+                flex-flow: column wrap;
+            }
+
+            .section-container .info-container .text-container form fieldset { 
+               padding: 1em; 
+               margin: 1em;
+               border: 5px solid #1F2937;
+            }
+
+            .section-container .info-container .text-container form fieldset legend {
                 font-size: 24px;
             }
 
-            .section-container .info-container .text-container p {
+            .section-container .info-container .text-container form fieldset ul li{
+               padding: 0.5em; 
+            }
 
-                text-align: justify;
-                text-justify: inter-word;
-                padding: 0.5em 3em 0.5em 3em;
+            .section-container .info-container .text-container form fieldset ul {
+                list-style-type: none;
+            }
+
+            .section-container .info-container .text-container form .button {
+                gap: 1em;
+                display: flex;
+                justify-content: center;
+                align-content: center;
+            }
+
+            .section-container .info-container .text-container form .button input {
                 font-size: 18px;
-                text-indent:50px;
+                padding: 0.4em 2em 0.4em 2em;
+                border-radius: 10px;
+                background-color: #1F2937;
+                color: #f9faf8;
+                font-weight: bolder;
             }
 
-            .section-container .info-container .image-container {
-
-                border: 5px solid #d19b2f;
-                display: flex;
-                flex-flow: column wrap;
-                text-align: center;
-                align-self: flex-start;
+            .section-container .info-container .text-container form .button input:hover 
+            {
+                background-color: #506787;
             }
+     
 
-            /* End of styles for the About Section */
+            /* End of styles for the Forms Section */
 
-            /* Start of styles for the Tips */
-
-            .tips-container {
-
-                display: flex;
-                flex-flow: column wrap;
-                background-color: lightgrey;
-                border: 10px solid #1F2937;
-                margin: 1em;
-                box-shadow: 10px 10px 8px #888888;
-
-            }
-
-            .tips-container .info-container {
-
-                padding: 1em;
-                font-size: 18px;
-
-            }
-
-            .tips-container .info-container .lists-container  h2 {
-
-                padding: 0.5em;
-
-            }
-
-            .tips-container .info-container .lists-container #info {
-
-                display: flex;
-                flex-flow: column wrap;
-                padding: 0em 0em 0em 4em;
-    
-
-            }
-
-            /* End of styles for the Tips section */
     
             /* Start of styles for the Footer */
 
@@ -237,47 +227,23 @@
       components relative to each successive screen size */
 
             @media all and (max-width: 1020px) {
-
-                .header-container h1 {
-                    font-size: 80px;
-                    -webkit-text-stroke-width: 3px;
-                }
-
-                .header-container h2 {
-                    font-size: 50px;
-                    -webkit-text-stroke-width: 3px;
-                }
-
-                .section-container .info-container {
-                    flex-flow: column wrap;
-                }
-
-                .section-container .info-container .image-container {
-                    align-self: center;
-                }
+                
+                    .section-container .info-container .text-container form fieldset ul textarea{
+                        width: 600px;
+                    }
 
                 }
 
             @media all and (max-width: 771px) {
 
-                .section-container .info-container .image-container img {
-                    width: 450px;
-                    height: 300px;
+                .section-container .info-container .text-container form fieldset ul textarea {
+                    width: 500px;
                 }
+
 
             }
 
-            @media all and (max-width: 660px) {
-
-                .header-container h1 {
-                    font-size: 80px;
-                    -webkit-text-stroke-width: 3px;
-                }
-
-                .header-container h2 {
-                    font-size: 50px;
-                    -webkit-text-stroke-width: 3px;
-                }
+            @media all and (max-width: 676px) {
 
                 .nav-container .outline {
 
@@ -286,27 +252,26 @@
 
                 }
 
-                .section-container .info-container {
-                    flex-flow: column wrap;
+                .section-container .info-container .text-container form fieldset ul textarea {
+                    width: 400px;
+                    height: 200px;
                 }
 
-                .section-container .info-container .image-container {
-                    align-self: center;
+                .section-container .info-container .text-container form fieldset ul input {
+                    width: 300px;
+
                 }
 
             }
 
+            @media all and (max-width: 600px) {
+
+                .section-container .info-container .text-container form fieldset ul textarea {
+                    width: 300px;
+                }
+            }
+
             @media all and (max-width: 556px) {
-
-                .header-container h1 {
-                    font-size: 65px;
-                    -webkit-text-stroke-width: 3px;
-                }
-
-                .header-container h2 {
-                    font-size: 30px;
-                    -webkit-text-stroke-width: 1.5px;
-                }
 
                 .section-container .info-container {
                     flex-flow: column wrap;
@@ -323,37 +288,30 @@
 
                 }
 
-                .section-container  .info-container .text-container #blockqt-2 {
-                    font-size: 14px;
-                }
+            }
 
+            @media all and (max-width: 475px) {
 
-                .section-container .info-container .image-container img {
-                    width: 350px;
+                .section-container .info-container .text-container form fieldset ul textarea {
+                    width: 200px;
                     height: 200px;
                 }
 
-            }
+                .section-container .info-container .text-container form fieldset ul input {
+                    width: 200px;
 
-            @media all and (max-width: 460px) {
+                }
 
-                .section-container .info-container .image-container img{
-                    width: 250px;
-                    height: 150px;
+                section-container .info-container .text-container form fieldset legend {
+                    font-size: 20px;
+                }
+
+                .section-container .info-container .text-container form .button input {
+                    font-size: 12px;
                 }
             }
 
             @media all and (max-width: 415px) {
-
-                .header-container h1 {
-                    font-size: 40px;
-                    -webkit-text-stroke-width: 1.5px;
-                }
-
-                .header-container h2 {
-                    font-size: 25px;
-                    -webkit-text-stroke-width: 1px;
-                }
 
                 .nav-container .outline {
 
@@ -375,6 +333,20 @@
 
                 .section-container .info-container .image-container {
                     align-self: center;
+                }
+
+                .section-container .info-container .text-container form fieldset legend {
+                    font-size: 18px;
+                }
+
+                .section-container .info-container .text-container form fieldset ul textarea {
+                    width: 150px;
+                    height: 200px;
+                }
+
+                .section-container .info-container .text-container form fieldset ul input {
+                    width: 150px;
+                    text-align: left;
                 }
 
 
@@ -405,7 +377,7 @@
             <ul class="outline">
 
 				
-				<a href="./Timbol_ex2.html"><bold>ABOUT US</bold></a> 
+				<a href="./index.html#about"><bold>ABOUT US</bold></a> 
 				<a href="./page2.html#bungalow"><bold>PROJECT</bold></a> 
 				<a href="./page3.html" class="active" onclick="
                 $('li').click(function(){
@@ -422,23 +394,285 @@
         </nav> <!-- End of the HTML for the Navigation Bar -->
 
         <section class="section-container" id=""> <!-- Start of HTMl for the About section-->
-			<h1 id="head"></h1>
+			<h1 id="head">Registration Form</h1>
 			
 			<div class="info-container"> 
 
-				<div class="image-container">
-          	
-				<!-- 	<img src="./Images/pexels-mart-production-7415057.jpg" alt="" width="650px" height="500px"> -->
-
-				</div>
-
 				<div class="text-container">
 					
-                    <br />
+                    <form method="post" action="mailto:aldy.timbol@gmail.com">
 
-                   
 
-                     <br />
+                        <fieldset>
+
+                            <legend align="left"><strong>Personal Information</strong></legend>
+
+                            <ul>
+
+                                <li style="text-decoration: none;">
+                                    <h3>First name:</h3>
+                                    <input type="text" name="name" size="20" maxlength="30" autocomplete="on">
+                                </li>
+
+                                <li>
+                                    <h3>Middle name:</h3>
+                                    <input type="text" name="name" size="20" maxlength="30" autocomplete="on">
+                                </li>
+
+                                <li>
+                                    <h3>Last name:</h3>
+                                    <input type="text" name="name" size="20" maxlength="30" autocomplete="on">                       
+                                </li>
+
+                                <li>
+                                    <h3>Nickname:</h3>
+                                    <input type="text" name="name" size="20" maxlength="30" autocomplete="on">                       
+                                </li>
+
+                                <li>
+                                    <h3>Name suffix:</h3>
+                                    <input type="radio" name="suffix" value="jr.">
+                                    Jr.
+                                    <input type="radio" name="suffix" value="sr.">
+                                    Sr.
+                                    <input type="radio" name="suffix" value="I">
+                                    I
+                                    <input type="radio" name="suffix" value="II">
+                                    II
+                                    <input type="radio" name="suffix" value="III">
+                                    III
+                                </li>
+
+                                <li>
+                                    <h3>Age:</h3>
+                                    <input type="number" name="Age
+                                    " size="2" maxlength="3">                       
+                                </li>
+
+                                <li>
+                                    <h3>Birthday: </h3>
+                                    <input type="date" name="bday">                     
+                                </li>
+
+                                <li>
+                                    <h3>Sex:</h3>
+                                    <input type="radio" name="gender" size="" value="man"> Male 
+                                    <input type="radio" name="gender" value="woman"> Female  
+                                    <input type="radio" name="gender" value="prefer_not__to_say "> Prefer not to say                       
+                                </li>
+
+                                <li>
+                                    <h3>Any other personal information you would like to share with us:</h3>
+                                    <textarea id="misc" cols="60" rows="10">
+
+                                    </textarea>
+                                </li>
+                                
+                                
+                            </ul>
+
+                        </fieldset>
+
+                        <fieldset>
+
+                            <legend align="left"><strong>Contact Information</strong></legend>
+
+                            <ul>
+
+                                <li>
+                                    <h3>Username/Email:</h3>
+                                    <input type="email" name="username" size="20" maxlength="30" autocomplete="on">
+                                </li>
+
+                                <li>
+                                    <h3>Cellphone No.:</h3>
+                                    <input type="number" name="Cellphone No." size="15" maxlength="20" autocomplete="on">                       
+                                </li>
+
+                                <li>
+                                    <h3>Telephone No.:</h3>
+                                    <input type="number" name="Telephone No." size="15" maxlength="20" autocomplete="on">                       
+                                </li>     
+
+                                <li>
+                                    <h3>Any other contact information:</h3>
+                                    <textarea id="misc" cols="60" rows="10">
+
+                                    </textarea>
+                                </li>
+                                
+                            </ul>
+
+                        </fieldset>
+
+                        <fieldset>
+
+                            <legend align="left"><strong>Preferences</strong></legend>
+
+                            <ul>
+
+                                <li>
+                                    <h3>Search bar:</h3>
+                                    <input type="search" name="pref_search" size="50">
+                                </li>
+
+                                <li>
+                                    <h3>Select which type of home you prefer:</h3>
+                                    <input type="checkbox" name="home" value="bungalow"> Bungalow
+                                    <input type="checkbox" name="home" value="condominium"> Condominium
+                                    <input type="checkbox" name="home" value="townhouse"> Townhouse
+                                    <input type="checkbox" name="home" value="bungalow"> Bungalow
+                                    <input type="checkbox" name="home" value="cottage"> Cottage
+                                </li>
+
+                                <li>
+                                    <h3>Select which you would like to see in your ideal home:</h3>
+                                    <input type="checkbox" name="feature" value="veranda"> Veranda
+                                    <input type="checkbox" name="feature" value="shed"> Shed
+                                    <input type="checkbox" name="feature" value="garden"> Garden
+                                    <input type="checkbox" name="feature" value="swimming_pool"> Swimming pool
+                                    <input type="checkbox" name="feature" value="fountain"> Fountain
+                                </li>
+
+                                <li>
+                                    <h3>Select the ideal location of your ideal home:</h3>
+                                    <input type="radio" name="location" value="urban">
+                                    Urban
+                                    <input type="radio" name="location" value="suburban">
+                                    Suburban
+                                    <input type="radio" name="location" value="provincial">
+                                    Provincial
+                                    <input type="radio" name="location" value="abroad">
+                                    Abroad
+                                    <input type="radio" name="location" value="mountain_rural">
+                                    Mountain rural
+                                </li>
+
+                                <li>
+                                    <h3>Kindly enter the specific coordinates of your ideal location</h3>
+                                    <input type="text" name="location" size="50" maxlength="40" autocomplete="on">  
+                                </li>
+
+                                <li>
+                                    <h3>What is the nature of you workplace:</h3>
+                                    <input type="radio" name="workplace" value="corporate_office">
+                                    Corporate office
+                                    <input type="radio" name="workplace" value="small_business">
+                                    Small business
+                                    <input type="radio" name="workplace" value="government_office">
+                                    Government office
+                                    <input type="radio" name="workplace" value="mobile_business">
+                                    Mobile business
+                                    <input type="radio" name="workplace" value="other">
+                                    Other
+                                </li>
+
+                                <li>
+                                    <h3>Is the proximity to your workplace a factor in deciding your ideal home? Why or why not?</h3>
+                                    <input type="text" name="location" size="50" maxlength="40" autocomplete="on">  
+                                </li>
+
+                                <li>
+                                    <h3>Any other comments regarding your preferences:</h3>
+                                    <textarea id="misc" cols="100" rows="10">
+
+                                    </textarea>
+                                </li>
+                                
+                            </ul>
+
+                        </fieldset>
+
+                        <fieldset>
+
+                            <legend align="left"><strong>Website survey</strong></legend>
+
+                            <ul>
+
+                                <li>
+                                    <h3>How did you learn about us?</h3>
+                                    <input type="text" name="name" size="50" maxlength="80" autocomplete="on">
+                                </li>
+
+                                <li>
+                                    <label for="company" style="font-size: 18px;"><strong>Which Real estate company have you previously interacted with?</strong></label>
+                                    <br />
+                                    <input list="company" name="company" id="companies" size="50">
+                                    <datalist id="company">
+                                        <option value="Edge">
+                                            <option value="Firefox">
+                                            <option value="Chrome">
+                                            <option value="Opera">
+                                            <option value="Safari">
+                                    </datalist>
+                                </li>
+
+                                <li>  
+                                    <h3>Do you prefer our website over other real estate companies</h3>
+                                    <input type="text" name="name" size="50"maxlength="80" autocomplete="on">
+                                </li>
+
+                                <li>  
+                                    <h3>What are the flaws of our website?</h3>
+                                    <input type="text" name="name" size="50"maxlength="80" autocomplete="on">
+                                </li>
+
+                                <li>  
+                                    <h3>What improvements can be made on the website?</h3>
+                                    <input type="text" name="name" size="50"maxlength="80" autocomplete="on">
+                                </li>
+
+                                <li>
+                                    <h3>Rate our website design: </h3>
+                                    <select id="rate_design">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </li>
+
+                                <li>
+                                    <h3>Rate our services: </h3>
+                                    <select id="rate_services">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </li>
+
+                                <li>
+                                    <h3>Rate your overall satisfaction</h3>
+                                    <select id="rate_satisfaction">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </li>
+
+                                <li>
+                                    <h3>Any other comments/suggestions:</h3>
+                                    <textarea id="misc" cols="100" rows="20">
+
+                                    </textarea>
+                                </li>
+                                
+                            </ul>
+
+                        </fieldset>
+
+                        <fieldset class="button">
+                            <legend align="left"><strong>Submission or Reset</strong></legend>
+                            <input type="submit" value="Submit">
+                            <input type="reset" value="Reset">
+                        </fieldset>
+
+                    </form>
 					
 				</div>
 				
