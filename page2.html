@@ -167,6 +167,66 @@
 
             /* End of styles for the Bungalow section */
 
+            /* Start of styles for the Preview section */
+
+            .preview-container {
+                display: flex;
+                flex-flow: column wrap;
+                background-color: #f9faf8;
+                border: 10px solid #1F2937;
+                margin: 2em;
+                box-shadow: 10px 10px 8px #888888;
+            }
+
+            .preview-container #head {
+
+                padding: 1em;
+                border: 10px solid #d19b2f;
+                text-align: center;
+                font-size: 28px;
+                align-items: center;
+            }
+
+            .preview-container .info-container {
+
+                border: 5px solid lightgrey;
+
+            }
+
+            .preview-container .info-container .image-container {
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: center;
+                padding: 2em;
+                align-self: center;
+            }
+
+            .preview-container .info-container .image-container ul {
+                display: flex;
+                flex-flow: row wrap;
+                gap: 1em;
+                justify-content: center;
+            }
+
+            .preview-container .info-container .image-container ul li {
+                list-style-type: none;
+                border: 5px solid #d19b2f;
+            }
+
+            .preview-container .info-container .image-container ul li img {
+                display: block;
+                cursor: pointer;
+                transition: all 0.75s ease-out;
+            }
+
+            .preview-container .info-container .image-container ul li img:hover {
+                transform: scale(1.5);
+                z-index: 2;
+            }
+
+
+            /* End of styles for the Preview section */
+
         
             /* Start of styles for the Footer */
 
@@ -218,6 +278,7 @@
                 .section-container .info-container .image-container {
                     align-self: center;
                 }
+                
 
             }
 
@@ -226,6 +287,11 @@
                 .section-container .info-container .image-container img {
                     width: 450px;
                     height: 450px;
+                }
+
+                .preview-container .info-container .image-container ul li img {
+                    width: 380px;
+                    height: 260px;
                 }
 
             }
@@ -291,6 +357,11 @@
                     height: 350px;
                 }
 
+                .preview-container .info-container .image-container ul li img {
+                    width: 280px;
+                    height: 220px;
+                }
+
             }
 
             @media all and (max-width: 460px) {
@@ -298,6 +369,11 @@
                 .section-container .info-container .image-container img{
                     width: 250px;
                     height: 250px;
+                }
+
+                .preview-container .info-container .image-container ul li img {
+                    width: 200px;
+                    height: 160px;
                 }
             }
 
@@ -333,6 +409,11 @@
 
                 .section-container .info-container .image-container {
                     align-self: center;
+                }
+                
+                .preview-container .info-container .image-container ul li img {
+                    width: 150px;
+                    height: 110px;
                 }
 
             }
@@ -381,6 +462,7 @@
         </nav> <!-- End of the HTML for the Navigation Bar -->
 
         <section class="section-container" id="bungalow"> <!-- Start of HTMl for the Bungalow section-->
+
 			<h1 id="head">Map of a Modern Bungalow</h1>
 			
 			<div class="info-container"> 
@@ -432,6 +514,38 @@
 					
 				</div>
 				
+			</div>
+			
+		</section> <!-- End of HTMl for the Bungalow section -->
+
+        <section class="preview-container" id="preview"> <!-- Start of HTMl for the Bungalow section-->
+
+            <h1 id="head">Preview of the rooms</h1>
+			
+			<div class="info-container"> 
+
+				<div class="image-container">
+          	
+                    <ul>
+                        <li>
+                            <img src="./Images/dining.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="./Images/living.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="./Images/master.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="./Images/kitchen.webp" alt="" width="480px" height="360px"> 
+                        </li>
+                        <li>
+                            <img src="./Images/library.jpg" alt="">
+                        </li>
+                    </ul>
+
+				</div>
+
 			</div>
 			
 		</section> <!-- End of HTMl for the Bungalow section -->
