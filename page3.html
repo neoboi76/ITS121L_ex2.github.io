@@ -180,6 +180,7 @@
             .section-container .info-container .text-container form .button input {
                 font-size: 18px;
                 padding: 0.4em 2em 0.4em 2em;
+                margin: 0.5em;
                 border-radius: 10px;
                 background-color: #1F2937;
                 color: #f9faf8;
@@ -228,6 +229,17 @@
 
             @media all and (max-width: 1020px) {
                 
+
+                    .header-container h1 {
+                        font-size: 80px;
+                        -webkit-text-stroke-width: 3px;
+                    }
+
+                    .header-container h2 {
+                        font-size: 50px;
+                        -webkit-text-stroke-width: 3px;
+                    }
+
                     .section-container .info-container .text-container form fieldset ul textarea{
                         width: 600px;
                     }
@@ -245,6 +257,17 @@
 
             @media all and (max-width: 676px) {
 
+                .header-container h1 {
+                    font-size: 80px;
+                    -webkit-text-stroke-width: 3px;
+                }
+
+                .header-container h2 {
+                    font-size: 50px;
+                    -webkit-text-stroke-width: 3px;
+                }
+                
+                
                 .nav-container .outline {
 
                     gap: 0em;
@@ -273,13 +296,18 @@
 
             @media all and (max-width: 556px) {
 
-                .section-container .info-container {
-                    flex-flow: column wrap;
+                .header-container h1 {
+                    font-size: 65px;
+                    -webkit-text-stroke-width: 3px;
                 }
 
-                .section-container .info-container .image-container {
-                    
-                    align-self: center;
+                .header-container h2 {
+                    font-size: 30px;
+                    -webkit-text-stroke-width: 1.5px;
+                }
+                
+                .section-container .info-container {
+                    flex-flow: column wrap;
                 }
 
                 .section-container .info-container .text-container p {
@@ -313,6 +341,16 @@
 
             @media all and (max-width: 415px) {
 
+                .header-container h1 {
+                    font-size: 40px;
+                    -webkit-text-stroke-width: 1.5px;
+                }
+
+                .header-container h2 {
+                    font-size: 25px;
+                    -webkit-text-stroke-width: 1px;
+                }
+                
                 .nav-container .outline {
 
                     font-size: 12px;
@@ -331,10 +369,6 @@
                     font-size: 18px;
                 }
 
-                .section-container .info-container .image-container {
-                    align-self: center;
-                }
-
                 .section-container .info-container .text-container form fieldset legend {
                     font-size: 18px;
                 }
@@ -347,6 +381,17 @@
                 .section-container .info-container .text-container form fieldset ul input {
                     width: 150px;
                     text-align: left;
+                }
+
+                .section-container .info-container .text-container form .button input {
+                    font-size: 10px;
+                }
+
+                .section-container .info-container .text-container form fieldset { 
+
+                    padding: 0em; 
+                    margin: 0em;
+                    font-size: 12px;
                 }
 
 
@@ -362,7 +407,7 @@
 
     <body>
 
-        <header class="header-container">
+        <header class="header-container"> <!-- Start of the HTML for the Header -->
 
             <h1>Realistic Real Estate</h1>
 
@@ -370,7 +415,7 @@
 
             <br>
 
-        </header>
+        </header> <!-- End of the HTML for the Header -->
 
         <nav class="nav-container"> <!-- Start of the HTML for the Navigation Bar -->
 
@@ -393,7 +438,7 @@
 
         </nav> <!-- End of the HTML for the Navigation Bar -->
 
-        <section class="section-container" id=""> <!-- Start of HTMl for the Forms section-->
+        <section class="section-container" id="forms"> <!-- Start of HTMl for the Forms section-->
 			<h1 id="head">Registration Form</h1>
 			
 			<div class="info-container"> 
@@ -680,10 +725,11 @@
 			
 		</section> <!-- End of HTMl for the Forms section-->
 
-        <footer>
-            <i>Copyright &copy Dino Alfred T. Timbol 2024</i> 
+        <footer> <!-- Start of the HTML for the Footer -->
+            <i>Copyright &copy Dino Alfred T. Timbol 2024</i>
+            <br /> 
             <a href="#">Back To Top</a>
-        </footer>
+        </footer> <!-- End of the HTML for the Footer -->
 
     </body>
 

@@ -13,7 +13,7 @@
 
 		<link rel="icon" href="./Images/input-onlinepngtools.jpg"image/x-icon">
 
-      <title>Kitchenm</title>
+      <title>Kitchen</title>
 
       <style> /* Start of Internal Styles */
 
@@ -88,7 +88,7 @@
 
          /* End of styles for the Navigation bar  */
 
-         /* Start of styles for the Bungalow section  */
+         /* Start of styles for the Dining section  */
 
          .section-container {
 
@@ -155,7 +155,7 @@
          }
 
 
-         /* End of styles for the Bungalow section */
+         /* End of styles for the Dining section */
 
          /* Start of styles for the Footer */
 
@@ -182,7 +182,7 @@
          }
 
          footer a:hover {
-            color: #d19b2f;
+         color: #d19b2f;
          }
 
          /* End of styles for the Footer */
@@ -191,16 +191,6 @@
    components relative to each successive screen size */
 
          @media all and (max-width: 1020px) {
-
-            .header-container h1 {
-               font-size: 80px;
-               -webkit-text-stroke-width: 3px;
-            }
-
-            .header-container h2 {
-               font-size: 50px;
-               -webkit-text-stroke-width: 3px;
-            }
 
             .section-container .info-container {
                flex-flow: column wrap;
@@ -223,17 +213,14 @@
 
          @media all and (max-width: 660px) {
 
-            .header-container h1 {
-               font-size: 80px;
-               -webkit-text-stroke-width: 3px;
-            }
-
-            .header-container h2 {
-               font-size: 50px;
-               -webkit-text-stroke-width: 3px;
-            }
-
             .nav-container .outline {
+
+               gap: 0em;
+               font-size: 16px;
+
+            }
+
+            .nav-container .other-pages {
 
                gap: 0em;
                font-size: 16px;
@@ -252,23 +239,6 @@
 
          @media all and (max-width: 556px) {
 
-            .header-container h1 {
-               font-size: 65px;
-               -webkit-text-stroke-width: 3px;
-            }
-
-            .header-container h2 {
-               font-size: 30px;
-               -webkit-text-stroke-width: 1.5px;
-            }
-
-
-            .nav-container .outline {
-
-               font-size: 16px;
-
-            }
-
             .section-container .info-container {
                flex-flow: column wrap;
             }
@@ -283,11 +253,6 @@
                font-size: 14px;
 
             }
-
-            .section-container  .info-container .text-container #blockqt-2 {
-               font-size: 14px;
-            }
-
 
             .section-container .info-container .image-container img {
                width: 350px;
@@ -306,17 +271,13 @@
 
          @media all and (max-width: 415px) {
 
-            .header-container h1 {
-               font-size: 40px;
-               -webkit-text-stroke-width: 1.5px;
-            }
-
-            .header-container h2 {
-               font-size: 25px;
-               -webkit-text-stroke-width: 1px;
-            }
-
             .nav-container .outline {
+
+               font-size: 12px;
+
+            }
+
+            .nav-container .other-pages {
 
                font-size: 12px;
 
@@ -356,9 +317,9 @@
          <ul class="outline">
 
 				
-				<a href="./index.html"><bold>ABOUT US</bold></a> 
+				<a href="./index.html#about"><bold>ABOUT US</bold></a> 
 				<a href="./page2.html#bungalow"><bold>PROJECT</bold></a> 
-				<a href="./page3.html"><bold>FORM</bold></a> 
+				<a href="./page3.html#forms"><bold>FORM</bold></a> 
 
 			</ul>
             
@@ -423,10 +384,11 @@
       <br />
 
 
-      <footer>
+      <footer> <!-- Start of the HTML for the Footer -->
          <i>Copyright &copy Dino Alfred T. Timbol 2024</i> 
+         <br />
          <a href="#">Back To Top</a>
-     </footer>
+     </footer> <!-- End of the HTML for the Footer -->
 
    </body>
 
